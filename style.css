@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    display: inline;
+}
+
+table {
+    padding: 20px;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.img1 {
+    height: 300px;
+    width: 400px;
+    
+}
+
+.img2 {
+    height: 300px;
+    width: 700px;
+}
+
+.img3 {
+    height: 300px;
+    width: 500px;
+}
+
+.img4 {
+    height: 300px;
+    width: 500px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header header header"
+    "navbar main aside"
+    "navbar footer footer";
+    min-height: 100vh;
+}
+
+header {
+    top: 0;
+    position: sticky;
+    grid-area: header;
+    padding: 40px;
+    background-color: silver;
+}
+
+.header_text {
+    font-family:cursive;
+    font-weight: 600;
+    background-image: -moz-linear-gradient(black, yellow, black);
+    color: solid;
+    background-clip: text;
+  
+}
+
+nav {
+    top: 99.2px;
+    position: sticky;
+    grid-area: navbar;
+    font-family: cursive;
+    background-image: -moz-linear-gradient(to right,yellow, red);
+    align-self: start;
+    height: calc(100vh - 99.2px);
+}
+
+main {
+    grid-area: main;
+    background-color: cyan;
+}
+
+
+aside {
+    align-self: start;
+    top: 0;
+    position: sticky;
+    grid-area: aside;
+    background-color: royalblue;
+    width: 100%; 
+    height: 100vh; 
+    background-image: url(images/$_57.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+
+a {
+    font-family: cursive;
+}
+
+@media(max-width: 800px) {
+    body {
+        display: grid;
+        grid-template-rows: auto 1fr auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "aside"
+        "nav"
+        "footer";
+    }
+
+    aside {
+        grid-area: aside;
+        background-color: red;
+        height: 30px;
+    }
+
+    main {
+        grid-area: main;
+        background-color: royalblue;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: yellow;
+        padding: 30px;
+    }
+
+    nav {
+        grid-area: nav;
+        background-color: goldenrod;
+        height: 30px;
+    }
+
+    section {
+        display: block;
+    }
+
+    table {
+        width: 100%;
+        display: block;
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    td {
+        width: 100%;
+        display: block;
+        padding: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    article {
+        font-size: 14px;
+    }
+}
